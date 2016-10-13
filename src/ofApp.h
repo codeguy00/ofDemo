@@ -3,6 +3,8 @@
 #include "ofMain.h"
 
 class ofApp : public ofBaseApp{
+	private:
+		int N;
 
 	public:
 		void setup();

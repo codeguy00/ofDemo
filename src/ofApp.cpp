@@ -2,7 +2,20 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	cout<<"Hello from Seup"<<endl;
 
+	ifstream infile{"input"};
+
+	if(!infile)
+	{
+	    cout<<"Error reading from file bin/data/input"<<endl;
+
+	     return;
+	}
+	 else
+	{
+	     infile>>N;
+	}
 }
 
 //--------------------------------------------------------------
@@ -15,7 +28,7 @@ void ofApp::draw(){
 ofBackground(0);
 ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
 
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < N; i++)
  {
    ofRotate(20);
    ofDrawLine(0,0,0,220);
